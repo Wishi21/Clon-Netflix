@@ -1,0 +1,62 @@
+body{
+    padding: 0;
+    margin:0;
+}
+
+#logoNav{
+    width: 110px;
+    height: 40px;
+    padding-right: 16px;
+    
+}
+
+.nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background: #0c0c0c;
+    
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    color: rgb(230, 227, 227);
+    padding: 12px 40px;
+}
+
+.menu li a{
+    font-family: 'Kanit', sans-serif;
+    font-size: .7rem;
+    text-decoration: none;
+    vertical-align:middle;
+    padding: 0 12px;
+    color: inherit;
+}
+
+.material-icons{
+    color: white;
+    font-size: 24px;
+    padding: 0 12px;
+}
+#PerfilNav{
+    width: 30px;
+    height: 30px;
+    border-radius: 25%;
+    padding: 0 12px;
+}
+
+.arrow{
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    
+    border-bottom: 5px solid white;
+  }
+
+.menuDer{
+   
+}
