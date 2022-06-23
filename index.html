@@ -7,16 +7,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/iconoPagina.png">
     <title>Netflox</title>
 </head>
+<script>
+    document.addEventListener('scroll', function(e) {
+        lastKnownScrollPosition = window.scrollY;
+        if(lastKnownScrollPosition == 0){
+            document.getElementById("nav").style.background = "#0c0c0c10";
+        }
+        else{
+            document.getElementById("nav").style.background = "#0c0c0c";
+        }
+    });    
+</script>
 <body>
     <header>
-        <nav class="nav">
+        <nav id="nav">
             <ul class="menu">
                 <li><img id="logoNav" src="/assets/img/logoNetflix2.png" alt="Logo Netflix"></li> 
-                <li><a href="#">Inicio</a></li>
+                <li><a style="color:white; font-weight: bold;"href="#">Inicio</a></li>
                 <li><a href="#">Series</a></li>
                 <li><a href="#">Peliculas</a></li>
                 <li><a href="#">Novedades populares</a></li>
@@ -30,5 +42,223 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="videoPreviewDiv">
+            <video autoplay muted loop id="myVideo">
+                <source src="./assets/video/evangelion_01cortado (online-video-cutter.com).mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        
+        <div id="datosVideoPreview">
+            <div id="datosVideoPreviewIzq">
+                <div id="datosVideoPreviewImg">
+                    <img src="./assets/img/evangelion.png" alt="imgEjemplo">
+                </div>
+                <div id="datosVideoPreviewTexto">
+                    <a>Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.</a>
+                </div>
+                <div id="datosVideoPreviewbtn">
+                    <div id="btnReproducir">
+                        <span class="material-icons">play_arrow</span>
+                        <a>Reproducir</a>
+                    </div>
+                    <div id="btnInfo">
+                        <span class="material-icons-outlined">info</span>
+                        <a>Más Información</a>
+                    </div>
+                </div>
+            </div>
+            <div id="datosVideoPreviewDer">
+                <div>
+                    <span class="material-icons">volume_off</span>
+                </div>
+                <div id="clasificacionDiv">
+                    <a>TV-MA</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="primeraFila" class="contenedorFila">
+            <h2>Populares en Netflix</h2>
+            <div class="contenedorImg">
+                <div>
+                    <img src="./assets/img/Populares/1.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Populares/2.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Populares/3.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Populares/4.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Populares/5.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Populares/6.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Populares/7.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Populares/8.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Populares/9.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Populares/10.jpg" alt="imgEjemplo">
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="contenedorFila">
+            <h2>Continuar viendo contenido de Daniel</h2>
+            <div class="contenedorImg">
+                <div>
+                    <img src="./assets/img/ContinuarViendo/1.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/ContinuarViendo/2.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/ContinuarViendo/3.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/ContinuarViendo/4.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/ContinuarViendo/5.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/ContinuarViendo/6.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/ContinuarViendo/7.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/ContinuarViendo/8.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/ContinuarViendo/9.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/ContinuarViendo/10.jpg" alt="imgEjemplo">
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedorFila">
+            <h2>Dramas</h2>
+            <div class="contenedorImg">
+                <div>
+                    <img src="./assets/img/Dramas/1.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Dramas/2.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Dramas/3.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Dramas/4.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Dramas/5.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Dramas/6.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Dramas/7.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Dramas/8.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Dramas/9.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Dramas/10.jpg" alt="imgEjemplo">
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedorFila">
+            <h2>Películas de acción</h2>
+            <div class="contenedorImg">
+                <div>
+                    <img src="./assets/img/Peliculas de accion/1.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Peliculas de accion/2.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Peliculas de accion/3.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Peliculas de accion/4.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Peliculas de accion/5.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Peliculas de accion/6.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Peliculas de accion/7.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Peliculas de accion/8.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Peliculas de accion/9.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/Peliculas de accion/10.jpg" alt="imgEjemplo">
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedorFila">
+            <h2>Solo en Netflix</h2>
+            <div class="contenedorImg">
+                <div>
+                    <img src="./assets/img/SoloNetflix/1.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/SoloNetflix/2.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/SoloNetflix/3.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/SoloNetflix/4.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/SoloNetflix/5.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/SoloNetflix/6.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/SoloNetflix/7.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/SoloNetflix/8.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/SoloNetflix/9.jpg" alt="imgEjemplo">
+                </div>
+                <div>
+                    <img src="./assets/img/SoloNetflix/10.jpg" alt="imgEjemplo">
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

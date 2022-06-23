@@ -1,6 +1,18 @@
 body{
-    padding: 0;
-    margin:0;
+    padding: 0 0;
+    margin:0 0;
+    width: 100%;
+    background: #141414;
+}
+
+main{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   width: 100%;
+   height: 100%;
+   background: inherit;
+   margin-bottom: 0;
 }
 
 #logoNav{
@@ -10,12 +22,16 @@ body{
     
 }
 
-.nav{
+#nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content:space-between;
     align-items: center;
-    background: #0c0c0c;
-    
+    background: #0c0c0c10;   
+    transition: 1s; 
+    z-index: 20;
 }
 
 .menu{
@@ -29,14 +45,18 @@ body{
 
 .menu li a{
     font-family: 'Kanit', sans-serif;
-    font-size: .7rem;
+    font-size: 1rem;
     text-decoration: none;
     vertical-align:middle;
     padding: 0 12px;
     color: inherit;
 }
 
-.material-icons{
+.menu li a:hover{
+    color: rgb(187, 186, 186);
+}
+
+.menu .material-icons{
     color: white;
     font-size: 24px;
     padding: 0 12px;
@@ -53,7 +73,218 @@ body{
     height: 0; 
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    
     border-bottom: 5px solid white;
-  }
+}
+
+.arrow:hover{
+    transform: rotate(180deg);
+    transition: width 1s;
+}
+
+.videoPreviewDiv{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.videoPreviewDiv:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(#14141400, #141414ad,#141414);
+    z-index: 5;
+}
+
+.videoPreviewDiv video{
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute; 
+    top:0;
+    left:0;
+}
+
+#datosVideoPreview{
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+    justify-content: space-between;
+}
+
+#datosVideoPreviewIzq{
+    display: flex;
+    flex-direction: column;  
+    padding-top: 10%;
+    padding-left: 3%;
+    width: 35%;
+}
+
+#datosVideoPreviewTexto{
+    font-size: 1.3rem;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+}
+
+#datosVideoPreviewbtn{
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    height: 3.5rem;
+}
+
+#datosVideoPreviewbtn div{
+    margin: 0 8px;
+    width: 46%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+#datosVideoPreviewbtn div a{
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#datosVideoPreviewImg img{
+    width: 100%;
+    height: 100%;
+}
+
+#btnReproducir{
+    height: inherit;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+#btnReproducir:hover{
+    background: #dddcdc;
+}
+
+#btnReproducir a{
+    color: black;
+}
+
+#btnInfo{
+    height: inherit;
+    background: #5f585bc4;
+    border-radius: 5px;
+    color: white;
+}
+
+#btnInfo:hover{
+    background: #4b4648c4;
+}
+
+#btnInfo a{
+    color: white;
+}
+
+#btnReproducir .material-icons{
+    font-size: 48px;
+}
+
+#btnInfo .material-icons-outlined{
+    color: white;
+    font-size: 38px;
+}
+
+#datosVideoPreviewDer{
+    display: flex;
+    flex-direction: row;  
+    justify-content: flex-end;
+    padding-top: 35%;
+    padding-right: 0;
+    width: 20%;
+}
+
+#datosVideoPreviewDer div span {  
+    color: white;
+    font-size: 3rem;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#datosVideoPreviewDer div span:hover { 
+    background: rgba(148, 141, 141, 0.445);
+} 
+
+#clasificacionDiv{
+    background: #26252aaf;
+    border-left: 4px solid white;
+    padding-right: 16%;
+    margin-left: 4%;
+    height: 3rem;
+}
+
+#datosVideoPreviewDer div a{
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#primeraFila{
+    padding-top: 5%;
+}
+
+.contenedorFila{
+    height: 8%;
+    width: 94%;
+    padding: 0 3%;
+    z-index: 5;
+}
+
+.contenedorFila h2{
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.8rem;
+    padding: 0 .5rem;
+    margin: 0;
+}
+
+.contenedorImg{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.contenedorImg::-webkit-scrollbar{
+    width: 0;
+}
+
+.contenedorImg div{
+    margin: 0 5px; 
+    padding: 1.7rem 0;
+    max-height: 150%;
+    flex: 15% 0 0;
+}
+
+.contenedorImg div img{
+    border-radius: 5px;
+    width: 100%;
+    max-height: 150%;
+}
+
+.contenedorImg div img:hover{
+    transform: scale(1.5);
+    opacity: .9;
+}
+
 
