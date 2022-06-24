@@ -154,7 +154,7 @@ main{
 #datosVideoPreviewbtn div a{
     font-family: 'Kanit', sans-serif;
     font-weight: bold;
-    font-size: larger;
+    font-size: 1.6rem;
 }
 
 #datosVideoPreviewImg img{
